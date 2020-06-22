@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <title>Cyclone</title>
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+
+    <link rel="stylesheet" href="/assets/css/templatemo-breezed.css">
+
+    <link rel="stylesheet" href="/assets/css/owl-carousel.css">
+
+    <link rel="stylesheet" href="/assets/css/lightbox.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-170183729-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-170183729-1');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKBX74P');</script>
+    <!-- End Google Tag Manager -->
+
+
+
+  </head>
+  <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKBX74P"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <%= yield %>
+
+    <!-- ***** Footer Start ***** -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 col-xs-12">
+            <div class="left-text-content">
+              <p>Copyright &copy; 2020 Project Cyclone
+
+            </div>
+          </div>
+          <div class="col-lg-6 col-xs-12">
+            <div class="right-text-content">
+              <ul class="social-icons">
+                <li><p>Follow Us</p></li>
+                <li><a rel="nofollow" href="https://fb.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a rel="nofollow" href="https://fb.com/"><i class="fa fa-twitter"></i></a></li>
+                <li><a rel="nofollow" href="https://fb.com/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a rel="nofollow" href="https://fb.com/"><i class="fa fa-dribbble"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <!-- jQuery -->
+  <script src="../public/assets/js/jquery-2.1.0.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="../public/assets/js/popper.js"></script>
+  <script src="../public/assets/js/bootstrap.min.js"></script>
+
+  <!-- Plugins -->
+  <script src="../public/assets/js/owl-carousel.js"></script>
+  <script src="../public/assets/js/scrollreveal.min.js"></script>
+  <script src="../public/assets/js/waypoints.min.js"></script>
+  <script src="../public/assets/js/jquery.counterup.min.js"></script>
+  <script src="../public/assets/js/imgfix.min.js"></script>
+  <script src="../public/assets/js/slick.js"></script>
+  <script src="../public/assets/js/lightbox.js"></script>
+  <script src="../public/assets/js/isotope.js"></script>
+
+  <!-- Global Init -->
+  <script src="../public/assets/js/custom.js"></script>
+
+  <script>
+
+      $(function() {
+          var selectedClass = "";
+          $("p").click(function(){
+              selectedClass = $(this).attr("data-rel");
+              $("#portfolio").fadeTo(50, 0.1);
+              $("#portfolio div").not("."+selectedClass).fadeOut();
+              setTimeout(function() {
+                  $("."+selectedClass).fadeIn();
+                  $("#portfolio").fadeTo(50, 1);
+              }, 500);
+
+          });
+      });
+
+  </script>
+
+
+</html>
