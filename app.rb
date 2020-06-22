@@ -2,6 +2,10 @@
 require("bundler")
 Bundler.require
 
+get '/unavailable' do
+  erb :download
+
+end
 
 get '/download' do
   file = File.open("downloads.txt", "r")
@@ -11,8 +15,7 @@ get '/download' do
   file = File.open("downloads.txt", "w")
   file.write(@current.to_s)
   file.close
-  erb :download
-
+  redirect '/unavailable'
 end
 
 get "/" do
