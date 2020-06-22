@@ -3,6 +3,9 @@ require("bundler")
 Bundler.require
 
 get '/unavailable' do
+  file = File.open("downloads.txt", "r")
+  @current = file.read.to_i
+  file.close
   erb :download
 
 end
